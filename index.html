@@ -1,0 +1,75 @@
+<script type="text/javascript">
+
+    var currLat;
+    var currLng;
+    var destLat;
+    var destLng;
+    var search;
+    var arriveBy;
+    
+    
+    
+    // Prompt user for permissions to pull current location & pull user's current location
+    navigator.geolocation.getCurrentPosition(function(position) {
+                var pos = {
+                  lat: position.coords.latitude,
+                  lng: position.coords.longitude
+                };
+        currLat = position.coords.latitude; 
+        currLng = position.coords.longitude;      
+    })
+    
+    search = prompt("Input an address");
+    
+    // Click event to call tomtom for departure time
+    $("#clickme").click(function() {
+    // Call location iq to geocode the location of user's destination
+    // function geocode() {
+    // var search = prompt("Input an address");
+    var queryURL = "https://us1.locationiq.com/v1/search.php?key=60538281b5df4d&q="+ search +"&limit=1&format=json"
+    // incorrect var queryURL = "https://us1.locationiq.com/v1/search.php?key=60538281b5df4d&q=1959 NE Pacific St, Seattle, WA 98195&format=json"
+    
+    // arrive at needs to be set to the moment.js converted time for specific format YYYY-MM-DD:hh:mm:ss-hh:mm
+    arriveBy = prompt("What time would you like to arrive?")
+    // let arriveBy="2020-01-18T19:30:00-08:00";
+    
+    $.ajax({
+        url: queryURL,
+        method: "GET"
+    }).then(function(response){
+        console.log(response)
+    
+        destLat = response[0].lat;
+        destLng = response[0].lon;
+    
+        console.log("Destination latitude is: " + destLat + " Destination longitude is: " + destLng)
+    
+        var queryURL = "https://api.tomtom.com/routing/1/calculateRoute/"+ currLat +","+ currLng +":"+ destLat +","+ destLng +"/json?instructionsType=text&computeTravelTimeFor=all&arriveAt=" + arriveBy +"&traffic=true&avoid=unpavedRoads&key=AM4KscCuGmaoCSFwdMq22yEw8A43NnN2"
+    
+        $.ajax({
+            url: queryURL,
+            method: "GET"
+        }).then(function(response) {
+    
+            let directions = response.routes[0].guidance.instructions;
+            // console.log(response)
+            $("#departTime").text("To arrive by " + arriveBy + ", you should leave by " + response.routes[0].summary.departureTime)
+    
+            for (let i = 0; i < directions.length; i++) {
+                // $("#directions").text(directions[i].message).appendTo($("#departTime"))
+                $("#directions").text("Open console log for directions!")
+                console.log(directions[i].message)
+            }
+    })
+    
+    })
+    
+    // }
+    // currLat=47.759038;
+    // currLng=-122.20210709999999;
+    // destLat=47.7569199899061;
+    // destLng=-122.155356263346;
+    
+    })
+    
+    </script>
