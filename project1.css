@@ -1,9 +1,11 @@
 .section {
     background-color: rgb(223, 113, 11);
+    padding: 15px;
 }
 
 .container {
     background-color: teal;
+    padding: 45px;
    
 }
 
