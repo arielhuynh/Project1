@@ -1,0 +1,19 @@
+.section {
+    background-color: rgb(223, 113, 11);
+}
+
+.container {
+    background-color: teal;
+   
+}
+
+.button {
+     background-color:rgb(117, 133, 133)
+}   
+
+.tile {
+    background-color: teal;
+    border: solid black 3px;
+
+       
+}
