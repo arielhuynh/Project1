@@ -1,0 +1,21 @@
+.section {
+    background-color: rgb(223, 113, 11);
+    padding: 15px;
+}
+
+.container {
+    background-color: teal;
+    padding: 45px;
+   
+}
+
+.button {
+     background-color:rgb(117, 133, 133)
+}   
+
+.tile {
+    background-color: teal;
+    border: solid black 3px;
+
+       
+}
