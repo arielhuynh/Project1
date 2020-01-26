@@ -7,6 +7,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
     <link rel="stylesheet" type="text/css" href="project1.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="ericajavascript.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/locale/af.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/locale/cy.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/locale/ar-dz.js" integrity="sha256-0g3Mo0RV+oP01aeOzrXsuh3JH4xrPUoBOvDgzanztPg=" crossorigin="anonymous"></script> -->
   </head>
   <body>
   <section class="section is-mobile">
@@ -22,76 +28,44 @@
     <br> <br>
         <div class="columns is-mobile">
         <div class="column is-two-fifths">
-            <input class="input" type="text" placeholder=" Current Address">
-            <input class="input" type="text" placeholder="Destination Address">
+            <input class="input" type="text" id=startposition placeholder=" Current Address">
+            <input class="input" type="text" id="destination" placeholder="Destination Address">
             <label class="checkbox">
                 <input type="checkbox">
                 Save Trip
               </label>
         </div>
         <div class="column">
-            <input class="input" type="text" placeholder="Arrival Time">
+            <input class="input" type="time" id="arrivaltime" placeholder="Arrival Time">
             
         </div>
         <div class="column">
-            <input class="button" type="submit" value="Submit input">
-            <input class="button" type="reset" value="Reset form">
+            <input class="button" type="submit" id="submitbtn" value="Submit input">
+            <input class="button" type="reset" id="resetbtn" value="Reset form">
         </div>
 
       </div>
   </section>
   <section class="section">
    <div class="columns is-mobile">
-     <div class="column is-7 has-background-grey">
-        <p>the map will go here!</p>   
-        <p>the map will go here!</p> 
-        <p>the map will go here!</p> 
-        <p>the map will go here!</p> 
-        <p>the map will go here!</p>  
-        <p>the map will go here!</p>   
-        <p>the map will go here!</p> 
-        <p>the map will go here!</p> 
-        <p>the map will go here!</p> 
-        <p>the map will go here!</p> 
-        <p>the map will go here!</p>   
-        <p>the map will go here!</p> 
-             
+     <div class="column is-7 has-background-grey" >
+        <p id="directions"></p>               
      </div>  
-     <div class="column has-background-grey-lighter">
+     <div class="column has-background-grey-lighter scroll" id="lookhere">
         <p>map INFO will go here! </p>
      </div>  
    </div>
 
-  </section>
-  <section class="section is-mobile">
-    <div class="tile is-ancestor">
-        <div class="tile is-parent">
-          <article class="tile is-child box">
-            <p class="title">One</p>
-            <p class="subtitle">share to fb etc</p>
-          </article>
-        </div>
-        <div class="tile is-parent">
-          <article class="tile is-child box">
-            <p class="title">two</p>
-            <p class="subtitle">"My saved trips"</p>
-          </article>
-        </div>
-        <div class="tile is-parent">
-          <article class="tile is-child box">
-            <p class="title">Three</p>
-            <p class="subtitle">something else</p>
-          </article>
-        </div>
-        <div class="tile is-parent">
-          <article class="tile is-child box">
-            <p class="title">Four</p>
-            <p class="subtitle">something else</p>
-          </article>
-        </div>
+</section>
+<section class="section is-mobile">
+  <div class="tile is-ancestor">
+      <div class="tile is-parent">
+        <article class="tile is-child box">
+          <p class="title">Sharing Your Momment!</p>
+        </article>
       </div>
-
-  </section>
+      
+</section>
 
   </body>
 </html> 
