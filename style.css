@@ -20,9 +20,7 @@
        
 }
 
-.trafficBody {
-    height: 100px;
-}
+
 
 .titleWeb {
     font-size: 150px;
@@ -36,8 +34,16 @@
 
 .directionTime {
     text-align: center;
+    opacity: 0.3;
+    height: 50px;
 }
 
 #lookhere {
-    font-weight: bolder;
+   background-color: solid black ;
+}
+
+body {
+    background-image: url("assets/traffic.png");
+    height: 100vh;
+    overflow: scroll;
 }
