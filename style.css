@@ -34,16 +34,22 @@
 
 .directionTime {
     text-align: center;
-    opacity: 0.3;
-    height: 50px;
+    opacity: 0.8;
+    font-size: 25px;
+    overflow: hidden;
 }
 
 #lookhere {
    background-color: solid black ;
+   font-weight: bolder;
 }
 
 body {
     background-image: url("assets/traffic.png");
     height: 100vh;
     overflow: scroll;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
