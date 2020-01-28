@@ -1,10 +1,10 @@
 .section {
-    background-color: rgb(223, 113, 11);
+   
     padding: 15px;
 }
 
 .container {
-    background-color: teal;
+    
     padding: 45px;
    
 }
@@ -14,12 +14,30 @@
 }   
 
 .tile {
-    background-color: teal;
+    
     border: solid black 3px;
 
        
 }
 
-.hero {
-    background-image: url("traffic.png");
+.trafficBody {
+    height: 100px;
+}
+
+.titleWeb {
+    font-size: 150px;
+    color: white;
+}
+
+.subtitleWeb {
+    color: white;
+    font-size: 25px;
+}
+
+.directionTime {
+    text-align: center;
+}
+
+#lookhere {
+    font-weight: bolder;
 }
