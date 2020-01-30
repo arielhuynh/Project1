@@ -2,6 +2,7 @@
 
 ![Late](https://media.giphy.com/media/99S1Zo5Z0gByg/giphy.gif)
 
+Team Members- Ally Burk, Ariel Huynh, Erica Turner, and Khoa Nguyen
 
 
 ## User Story
